@@ -1,0 +1,722 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+body {
+    font-family: 'varela round' , sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(234, 231, 150, 0.75);
+}
+.cen {
+    margin: 0px 5%;
+}
+.rel {
+    position: relative;
+}
+.rel:after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top:0;
+    left:0;
+    background-color:FFFAE6; 
+}
+.rel:hover:after{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    z-index: -1;
+}
+.all{
+    padding: 100px 0;
+}
+.section-head {
+    text-align: center;
+}
+.st{
+    text-transform: capitalize;
+    margin: 5px 0 10px 0;
+    font-size: 40px;
+    color: FF9F66 ;
+}
+.underline {
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: 002379;
+    margin: 0  auto  80px  auto;
+}
+
+/* 1- Header Section....................... */
+.header {
+    width:100%;
+    height: 50px;
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(239, 235, 235, 0.6);
+}
+.logo {
+    width: 30%;
+    float: left;
+}
+.Hli{
+    width: 70%;
+    list-style: none;
+    float: left;
+    text-align: right;
+    position: relative;
+}
+.Hli >li {
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+}
+.Hli >li >a {
+    color: orangered;
+    display: block;
+    padding: 15px;
+}
+.Hli li a:after {
+    content: "";
+    width: 0;
+    height: 3px;
+    display: block;
+    margin-top: 2px;
+    background-color: 002379;
+    transition: 0.5s;
+  }
+  .Hli li a.colored::after {
+    width: 100%;
+  }
+  .Hli li a:hover:after {
+    width: 100%;
+  }
+  .abd {
+    position: relative;
+  }
+  .blogdiv {
+    position: absolute;
+    background-color: 002379;
+    height: 40px;
+    width: 100px;
+    margin-top: 18px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    opacity: 0;
+    transition:  .5s;
+    visibility: hidden;
+  }
+  .abd:hover  .blogdiv {
+    visibility: visible;
+    opacity: 1;
+
+  }
+/* 2- Main Section....................... */
+.Main {
+    height: 100vh;
+    background-image: url(../images/Main.jpg);
+    background-position: cover;
+    position: relative;
+}
+.Mcontent {
+    width: 60%;
+    position: absolute; /* Hero image  */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Hero image  end */
+    text-align: center;
+}
+.Mt {
+    color: FF5F00;
+    font-size: 60px;
+}
+.Mp {
+    margin: 20px 0px;
+    color: C40C0C;
+    letter-spacing: 2px;
+}
+.btn {
+    margin: 10px 0px;
+    width: 150px;
+    padding: 15px 0px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 17px;
+}
+.Mainbtn-start {
+    margin-right: 10px;
+}
+.Mainbtn-Learn {
+    background-color: 002379;
+    color: white;
+}
+.btn:hover {
+    opacity: 0.7;
+}
+/* 3- website Section....................... */
+.Wcontent {
+    height: 350px;
+    text-align: center;
+    overflow: hidden;
+}
+.Winfo {
+    float: left;
+    border: 1px solid rgb(44, 44, 93) ;
+    width: 30%;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.icon {
+    color:002379;
+    margin-bottom: 15px;
+}
+.Wit {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    color: FF9F66;
+    transition: color .5s;
+}
+.Wip {
+    letter-spacing: 2px;
+    line-height: 22px;
+    margin-bottom: 15px;
+    color:FF5F00;
+}
+.Winfo:hover .Wit{
+    color: 002379;
+    transition: color 1s;
+}
+/* 4- work featured  Section....................... */
+.Fworks {
+    background-color: FFFAE6 ;
+}
+.Fwcontent { 
+    overflow: hidden;
+}
+.FWinfo {
+    float: left;
+    width: 30%;
+    padding: 20px 10px;
+    margin-bottom: 25px;
+    position: relative;
+}
+.FWinfo img {
+    width: 100%;
+    height: 200px;
+}
+.FWtype {
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(220, 129, 80, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition:opacity 1s;
+}
+.FWinfo:hover .FWtype {
+    visibility: visible;
+    opacity: 1;
+}
+.FWtypeinfo {
+    position: absolute;
+    left:50%;
+    top:50%;
+    width: 80%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.typec {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: 002379 ;
+    display: block;
+    margin-bottom: 20;
+    transition-delay: 0;
+}
+.typet {
+    color: FFFAE6;
+    font-size: 15px;
+    margin-bottom: 20;
+    transition-delay: 0.4s;
+}
+.FWtype a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: FF5F00 ;
+    transition-delay: .6s;
+}
+.typec , .typet , .FWtype a {
+    position: relative;
+    top:15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 1s ,opacity .5s;
+}
+.FWinfo:hover .typec , .FWinfo:hover .typet , .FWinfo:hover .FWtype a {
+    top:0;
+    opacity: 1;
+    visibility: visible;
+}
+.FWtype a i{
+    line-height: 40px;
+}
+/* 5- offer  Section........part of this section is repetitve from section 3 so we might find it there............... */
+
+.ofcontent {
+    overflow: hidden;
+}
+.ofinfo {
+    float: left;
+    border: 1px solid rgb(44, 44, 93) ;
+    width: 30%;
+    height: 200px;
+    padding: 25px 15px 25px 60px;
+    margin-bottom: 25;
+    position: relative;
+}
+
+.fa-music {
+    position: absolute;
+    color:002379;
+    left:20px;
+    top:30px;
+    font-size: 22px;
+}
+.ofit {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    color: FF9F66;
+    transition: color .5s;
+}
+.ofip {
+    letter-spacing: 2px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color:FF5F00;
+}
+.ofinfo:hover .ofit {
+    color:002379 ;
+}
+/* 6- Why us  Section........part of this section is repetitve from section 3 so we might find it there............... */
+.why {
+    background-color:FFFAE6 ;
+    height: 100vh;
+    padding: 50px;
+}
+.whcontent , .whcontent-image {
+    width: 50%;
+    float: left;
+}
+.whcontent-image {
+    text-align: center;
+}
+.why-section-head {
+    text-align: left;
+}
+.why-section-head .underline {
+    margin-left: 0;
+}
+.whyp {
+    line-height: 1.4;
+    letter-spacing: 1 ;
+    font-size: 18px;
+    color:002379 ;
+    margin-top: -50px;
+    margin-bottom: 20px;
+    padding-right: 10px;
+}
+.whlist {
+    list-style: none;
+    padding-right: 10px;
+}
+.whlist li { 
+    font-size: 15px;
+    color:FF5F00 ;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+.whlist li i {
+    color:002379 ;
+}
+.whbullets {
+    list-style: none;
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 7px;
+}
+.whbullets li {
+    display: inline-block;
+    width: 15px;
+    height: 6px ;
+    background-color:FF5F00;
+    border-radius: 2px;
+    margin-right: 7px;
+}
+.whbullets li.colored{
+    background-color:002379;
+}
+.whbullets li:hover{
+    background-color:002379 ;
+}
+/* 7- Achievments Section....................... */
+.achivment {
+    position: relative;
+    background-image: url(../images/achivment.jpg);
+    height: 300px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.achitems {
+    padding-top: 120px;
+    overflow: hidden;
+}
+.achivment-item {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+.achivment-item i {
+    color: 002379 ;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.achivmentn , .achivmentp {
+    color: FFFAE6 ;
+}
+/*8 - Prices Section....................... */
+.pricing {
+    background-color: FFFAE6;
+}
+.Pcontent {
+overflow: hidden;
+}
+.Pinfo {
+float: left;
+border: 1px solid rgb(43, 43, 110);
+width: 30%;
+padding: 20px 15px;
+text-align: center;
+}
+.Pinfot {
+text-transform: uppercase;
+margin-bottom: 15px;
+color: FF9F66;
+}
+.price {
+width: 80px;
+height: 80px;
+border: 2px solid rgb(43, 43, 110);
+border-radius: 50%;
+margin:20px auto;
+color: 002379;
+}
+.amount {
+font-size: 35px;
+margin-top: 8px;
+}
+.lesson {
+font-weight: bold;
+}
+.Winfo:hover .Wit {
+color: 002379;
+transition: color 1s;
+}
+.Pinfo p {
+color: FF9F66 ;
+margin-bottom: 8px;
+}
+.subscribe {
+border: 2px solid rgb(43, 43, 110);
+text-transform: uppercase;
+padding: 5px;
+background-color: none;
+margin-top: 15px;
+}
+.Pinfo {
+    position: relative;
+}
+.Pinfo::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color:002379 ;
+}
+.Pinfo:hover::after {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    opacity: 0.3;
+}
+.Pinfo:hover  .price{
+    color: FF5F00 ;
+    transition: 1s;
+}
+.Pinfo:hover  .pinfot{
+    color: FF5F00 ;
+}
+/* 9- location  Section.................................................. */
+.location {
+    position: relative;
+    background-image: url(../images/location.jpg);
+    height: 350px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.loccontent {
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+}
+.location-item {
+    float: left;
+    width: 50%;
+    margin-top: 120px;
+    padding-right: 50px;
+    padding-top: 30px;
+    
+}
+.locitem {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 20px 20px 5px 100px;
+}
+.locimg {
+    position: absolute;
+    border-radius: 50%;
+    top: 8px;
+    left: 6px;
+}
+.loct {
+    color:FF9F66 ;
+}
+.adress {
+    color: 002379 ;
+}
+.locp {
+    color:FF9F66;
+    text-transform: capitalize;
+    font-size: 15px;
+    margin-left:20px ;
+}
+/* 10- Team member  Section.................................................. */
+.otcontent {
+    width: 80%;
+    margin: auto;
+}
+.OT {
+    overflow: hidden;
+}
+.OTmember {
+    float: left;
+    background-color: FFFAE6;
+    width: 30%;
+    padding: 15px 15px;
+    text-align: center;
+    position: relative;
+}
+.OTimage{
+    width: 90%;
+    margin: auto;
+    position: relative;
+} 
+.OTimage img {
+    width: 100%;
+}
+.otoverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color:rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+}
+.OTmember:hover .otoverlay{
+    visibility: visible;
+}
+.otoverlay a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color:002379;
+    color: white;
+    font-size: 19px;
+    margin-left: auto;
+}
+.otoverlay a i{
+    line-height: 40px;
+}
+.OTinfot {
+    padding: 11px 0px;
+    text-transform: capitalize;
+    color: 002379;
+}
+.OTinfop {
+    color: rgb(106, 184, 223);;
+    text-transform: uppercase;
+}
+.OTmember:hover .OTinfot{
+    color: FF9F66;
+    transition: 0.7s;
+}
+.OTmember:hover .OTinfop{
+    color: FF5F00;
+    transition: 1s;
+}
+.OTmember::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0 ;
+    left: 0;
+    background-color: 002379;
+    opacity: 0;
+}
+.OTmember:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transition: 1s   ;
+}
+/* 10- Team member  Section.................................................. */
+.RN {
+    overflow: hidden;
+    background-color:FFFAE6 ;
+}
+.RNmember {
+    float: left;
+    background-color: white;
+    width: 30%;
+    text-align: left;
+    padding-left: 18px;
+    padding-right: 22px;
+    position: relative;
+}
+.RNimage img {
+    margin-bottom: 25px;
+}
+.rnoverlay i {
+    font-size: 9px;
+    margin-right: 15px;
+    margin-bottom: 25px;
+    color: rgb(106, 184, 223);
+}
+.rninfot {
+    text-transform: lowercase;
+    color: 002379;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+.rninfop {
+    color: FF9F66;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+.rnmember::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0 ;
+    left: 0;
+    background-color: 002379;
+    opacity: 0;
+}
+.rnmember:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transition: 1s   ;
+}
+.rnrm {
+    color: rgb(106, 184, 223);
+}
+/* 11- Footer  Section.................................................. */
+.footer {
+    text-align: center;
+    background-color: rgba(239, 235, 235);
+    height: 300px;
+    padding: 50px 0px;
+}
+.flinks {
+    list-style: none;
+    margin: 20px 0px;
+}
+.flinks li {
+    display: inline-block;
+    background-color:  rgb(106, 184, 223);
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.flinks li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: FFFAE6 ;
+    font-size: 25px;
+    padding-top: 12.5;
+}
+.flinks li::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color:002379 ;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    transition: 0.3s;
+}
+.flinks li:hover::after {
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+}
+.flinks li:hover a {
+    color: white;
+}
+.footer p {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: FF9F66;
+}
+
+
+
+
+
